@@ -99,8 +99,7 @@ class NPCAgent:
             return "end"
             
         last_user_msg = user_messages[-1].content
-        
-        # Check if we already ran the tool in this sequence to avoid infinite loop
+
         tool_ran = any(isinstance(m, SystemMessage) and "[Tool Result]" in m.content for m in messages[-2:])
 
         if "SEARCH_TOOL" in last_user_msg and not tool_ran:
