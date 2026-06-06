@@ -11,7 +11,7 @@ The system is built on a **Hierarchical Multi-Agent Architecture** to allow user
 graph TD
     User[Simulation Taker] -->|REST API| API[FastAPI Backend]
     
-    subgraph NPC_Engine [AI Co-worker Engine (NPC Engine)]
+    subgraph NPC_Engine [AI Co-worker Engine - NPC Engine]
         API --> Supervisor[Main Agent / Supervisor Node]
         Supervisor --> State[State Management: Postgres/Redis]
         
